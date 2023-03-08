@@ -26,7 +26,7 @@ All modules can communicate with the other modules using their API endpoints.
 * **Admin.php** - if the module has install/uninstall functions or an admin area interface\
 * **Client.php** - if the module has a client area interface
 
-### Api folder
+### API folder
 
 * **Admin.php** - Administrator API, only authorized administrators will be able to call these endpoints.
 * **Client.php** - Client API, only logged in clients will be able to call these endpoints.
