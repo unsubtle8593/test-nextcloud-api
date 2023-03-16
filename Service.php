@@ -41,7 +41,7 @@ class Service
     {
         return array(
             'source' => array(
-                'path' => 'https://github.com/FOSSBilling/example', // An example external link
+                'path' => 'https://github.com/FOSSBilling/example-module', // An example external link
                 'label' => __trans('View source code'),
             ),
             'example' => array(
