@@ -117,7 +117,7 @@ class Service
             FROM extension_meta
             WHERE extension = 'example' ";
 
-        $client_id = $this->di['array_get']($data, 'client_id', null);
+        $client_id = $data['client_id'] ?? null;
 
         if (null !== $client_id) {
             $sql .= ' AND client_id = :client_id';
