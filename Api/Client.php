@@ -37,7 +37,7 @@ class Client extends \Api_Abstract
         $this->di['events_manager']->fire(['event' => 'onAfterClientCalledExampleModule', 'params' => ['key' => 'value']]);
 
         // Log message
-        $this->di['logger']->info('Log message to log file');
+        $this->di['logger']->info('Log something to the log file');
 
         $systemService = $this->di['mod_service']('System');
         $clientService = $this->di['mod_service']('Client');

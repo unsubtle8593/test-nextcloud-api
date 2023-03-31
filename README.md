@@ -3,7 +3,7 @@
 
 This module provides a starting point for the developers on creating their FOSSBilling module.
 
-Explore the files and comments in the code to understand the structure of the module better. See the social links on [our website](https://fossbilling.org) if you need further information.
+Explore the files and comments in the code to understand the structure of the module better. See the social links on [our website](https://fossbilling.org) if you need further information. This module has its own [GitHub repository](https://github.com/FOSSBilling/example-module) where you can submit issues and pull requests.
 
 In general, we use modules to extend the functionality of FOSSBilling.
 

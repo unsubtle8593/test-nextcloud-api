@@ -33,29 +33,10 @@ class Service
     }
 
     /**
-     * This method returns an array of custom links to be displayed in the settings page of the admin area.
-     * 
-     * @return array
-     */
-    public function getSettingsRoutes()
-    {
-        return array(
-            'source' => array(
-                'path' => 'https://github.com/FOSSBilling/example-module', // An example external link
-                'label' => __trans('View source code'),
-            ),
-            'example' => array(
-                'path' => 'extension/settings/example', // An example internal link. Internal links are relative to the custom admin panel path.
-                'label' => __trans('This is an example!'),
-            ),
-        );
-    }
-
-    /**
-     * Method to install module. In most cases you will provide your own
-     * database table or tables to store extension related data.
+     * Method to install the module. In most cases you will use this
+     * to create database tables for your module.
      *
-     * If your extension is not very complicated then extension_meta
+     * If your module isn't very complicated then the extension_meta
      * database table might be enough.
      *
      * @return bool
@@ -64,7 +45,7 @@ class Service
      */
     public function install()
     {
-        // execute sql script if needed
+        // Execute SQL script if needed
         $db = $this->di['db'];
         $db->exec('SELECT NOW()');
 
@@ -73,7 +54,11 @@ class Service
     }
 
     /**
-     * Method to uninstall module.
+     * Method to uninstall module. In most cases you will use this
+     * to remove database tables for your module.
+     * 
+     * You also can opt to keep the data in the database if you want
+     * to keep the data for future use.
      *
      * @return bool
      *
@@ -88,9 +73,9 @@ class Service
     /**
      * Method to update module. When you release new version to
      * extensions.fossbilling.org then this method will be called
-     * after new files are placed.
+     * after the new files are placed.
      *
-     * @param array $manifest - information about new module version
+     * @param array $manifest - information about the new module version
      *
      * @return bool
      *

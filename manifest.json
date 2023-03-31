@@ -2,11 +2,11 @@
   "id": "example",
   "type": "mod",
   "name": "Example",
-  "description": "An example module for developers to get started.",
+  "description": "An example module for developers to get started",
   "icon_url": "icon.svg",
   "homepage_url": "https://fossbilling.org",
   "author": "FOSSBilling",
   "author_url": "https://fossbilling.org/",
-  "license": "GPL version 2 or later - http://www.gnu.org/licenses/old-licenses/gpl-2.0.html",
-  "version": "4.22.0"
+  "license": "Apache 2.0 - https://www.apache.org/licenses/LICENSE-2.0",
+  "version": "0.0.1"
 }
