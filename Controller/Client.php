@@ -48,7 +48,7 @@ class Client implements \Box\InjectionAwareInterface
      *
      * @param \Box_App $app - returned by reference
      */
-    public function register(\Box_App &$app)
+    public function register(\Box_App &$app): void
     {
         $app->get('/example', 'get_index', [], static::class);
         $app->get('/example/protected', 'get_protected', [], static::class);

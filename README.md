@@ -1,4 +1,3 @@
-
 # Example module README file
 
 This module provides a starting point for the developers on creating their FOSSBilling module.

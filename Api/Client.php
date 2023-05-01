@@ -31,7 +31,7 @@ class Client extends \Api_Abstract
      *
      * Be careful not to expose sensitive data from the Admin API.
      */
-    public function get_info($data)
+    public function get_info($data): array
     {
         // call custom event hook. All active modules will be notified
         $this->di['events_manager']->fire(['event' => 'onAfterClientCalledExampleModule', 'params' => ['key' => 'value']]);

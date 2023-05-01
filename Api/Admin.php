@@ -29,7 +29,7 @@ class Admin extends \Api_Abstract
      *
      * @return string[]
      */
-    public function get_something($data)
+    public function get_something($data): array
     {
         $result = [
             'apple',

@@ -48,7 +48,7 @@ class Admin implements \Box\InjectionAwareInterface
      *
      * @return array
      */
-    public function fetchNavigation()
+    public function fetchNavigation(): array
     {
         return [
             'group' => [
@@ -77,7 +77,7 @@ class Admin implements \Box\InjectionAwareInterface
      * @example $app->get('/example/test',      'get_test', null, get_class($this)); // calls get_test method on this class
      * @example $app->get('/example/:id',        'get_index', array('id'=>'[0-9]+'), get_class($this));
      */
-    public function register(\Box_App &$app)
+    public function register(\Box_App &$app): void
     {
         $app->get('/example', 'get_index', [], static::class);
         $app->get('/example/test', 'get_test', [], static::class);

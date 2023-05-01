@@ -43,7 +43,7 @@ class Service
      *
      * @throws \Box_Exception
      */
-    public function install()
+    public function install(): bool
     {
         // Execute SQL script if needed
         $db = $this->di['db'];
@@ -56,7 +56,7 @@ class Service
     /**
      * Method to uninstall module. In most cases you will use this
      * to remove database tables for your module.
-     * 
+     *
      * You also can opt to keep the data in the database if you want
      * to keep the data for future use.
      *
@@ -64,7 +64,7 @@ class Service
      *
      * @throws \Box_Exception
      */
-    public function uninstall()
+    public function uninstall(): bool
     {
         // throw new \Box_Exception("Throw exception to terminate module uninstallation process with a message", array(), 124);
         return true;
@@ -81,7 +81,7 @@ class Service
      *
      * @throws \Box_Exception
      */
-    public function update($manifest)
+    public function update(array $manifest): bool
     {
         // throw new \Box_Exception("Throw exception to terminate module update process with a message", array(), 125);
         return true;
@@ -95,12 +95,12 @@ class Service
      *
      * @return array() = list of 2 parameters: array($sql, $params)
      */
-    public function getSearchQuery($data)
+    public function getSearchQuery(array $data): array
     {
         $params = [];
         $sql = "SELECT meta_key, meta_value
             FROM extension_meta
-            WHERE extension = 'example' ";
+            WHERE extension = 'example'";
 
         $client_id = $data['client_id'] ?? null;
 
@@ -117,13 +117,13 @@ class Service
     /**
      * Methods is a delegate for one database row.
      *
-     * @param array  $row  - array representing one database row
+     * @param array $row - array representing one database row
      * @param string $role - guest|client|admin who is calling this method
-     * @param bool   $deep - true|false deep or light version of result to return to API
+     * @param bool $deep - true|false deep or light version of result to return to API
      *
      * @return array
      */
-    public function toApiArray($row, $role = 'guest', $deep = true)
+    public function toApiArray(array $row, string $role = 'guest', bool $deep = true): array
     {
         return $row;
     }
@@ -144,7 +144,7 @@ class Service
      *
      * @throws \Box_Exception
      */
-    public static function onEventClientLoginFailed(\Box_Event $event)
+    public static function onEventClientLoginFailed(\Box_Event $event): void
     {
         // getting Dependency Injector
         $di = $event->getDi();
@@ -199,7 +199,7 @@ class Service
     /**
      * This event hook is registered in example module client API call.
      */
-    public static function onAfterClientCalledExampleModule(\Box_Event $event)
+    public static function onAfterClientCalledExampleModule(\Box_Event $event): void
     {
         // error_log('Called event from example module');
 

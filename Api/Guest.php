@@ -33,15 +33,13 @@ class Guest extends \Api_Abstract
      *
      * @return string
      */
-    public function readme($data)
+    public function readme(): string
     {
         // We'll be using the file_get_contents to fetch the full content of the README file
         // Our example admin and client area pages will use this function to fetch the README data
         // Then, we'll tell Twig to parse and display the markdown output
 
-        $readme = file_get_contents(PATH_MODS . '/Example/README.md');
-
-        return $readme;
+        return file_get_contents(PATH_MODS . '/Example/README.md');
     }
 
     /**
@@ -49,7 +47,7 @@ class Guest extends \Api_Abstract
      *
      * @return int
      */
-    public function random_number()
+    public function random_number(): int
     {
         return random_int(1, 100);
     }
