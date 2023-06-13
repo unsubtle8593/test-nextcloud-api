@@ -27,7 +27,7 @@ class Service
 {
     protected $di;
 
-    public function setDi(mixed $di)
+    public function setDi(\Pimple\Container|null $di): void
     {
         $this->di = $di;
     }

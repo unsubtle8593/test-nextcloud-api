@@ -21,22 +21,16 @@
 
 namespace Box\Mod\Example\Controller;
 
-class Client implements \Box\InjectionAwareInterface
+class Client implements \FOSSBilling\InjectionAwareInterface
 {
     protected $di;
 
-    /**
-     * @param mixed $di
-     */
-    public function setDi($di)
+    public function setDi(\Pimple\Container|null $di): void
     {
         $this->di = $di;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getDi()
+    public function getDi(): ?\Pimple\Container
     {
         return $this->di;
     }
