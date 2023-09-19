@@ -16,9 +16,9 @@ All modules can communicate with the other modules using their API endpoints.
 
 ## Optional
 
-* **README.md** - file for installation and getting started instructions.
-* **html_admin** - folder - for admin area templates, to store custom *.html.twig files.
-* **html_client** - folder - for client area templates, to store custom *.html.twig files.
+* **README.md** - A file which generally is used to hold a getting started guide or installation instructions for your module.
+* **html_admin** - A folder holding front-end templates (`*.html.twig files`) for the administrator panel.
+* **html_client** - A folder holding front-end templates (`*.html.twig files`) for the client / guest area.
 
 ### Controller folder
 
