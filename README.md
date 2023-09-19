@@ -16,14 +16,14 @@ All modules can communicate with the other modules using their API endpoints.
 
 ## Optional
 
-* **README.md** - file for installation and getting started instructions
-* **html_admin** folder - for admin area templates, to store custom *.html.twig files
-* **html_client** folder - for client area templates, to store custom *.html.twig files
+* **README.md** - file for installation and getting started instructions.
+* **html_admin** - folder - for admin area templates, to store custom *.html.twig files.
+* **html_client** - folder - for client area templates, to store custom *.html.twig files.
 
 ### Controller folder
 
-* **Admin.php** - if the module has install/uninstall functions or an admin area interface\
-* **Client.php** - if the module has a client area interface
+* **Admin.php** - Defines the module's routes and navigation items for the administrator panel.
+* **Client.php** - Used to define the module's routes for the client / guest area.
 
 ### Api folder
 
@@ -53,4 +53,3 @@ This extension is open source software and is released under the Apache v2.0 lic
 
 This product includes the following third party work:
 * Open Source Iconography by [Pictogrammers](https://pictogrammers.com/) licensed under the [Pictogrammers Free License](https://pictogrammers.com/docs/general/license/).
-* We recommend hosting your extensions on a public [GitHub](https://github.com) repository.
