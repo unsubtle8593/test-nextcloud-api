@@ -291,4 +291,61 @@ class Service
          $api->email_template_send($email);
         */
     }
+        public static function onAfterAdminCronRun(\Box_Event $event)
+    {
+        // Here you can define the userid and password or retrieve it dynamically
+       // $userid = 'Frank7';
+       // $password = 'testbruker123';
+
+        // $service = new \Box\Mod\NextcloudUserManager\Service();
+       // $response = $service->createUser($userid, $password);
+
+        // Log the response for debugging
+        error_log('Nextcloud user creation response: ' . $response);
+
+        // User credentials for basic authentication
+        $username = 'admin';
+        $password = 'magicalbAlloon041';
+        
+        // API endpoint
+        $url = 'https://my.tebi.cloud/ocs/v1.php/cloud/users';
+        
+        // Data to be sent in POST request
+        $data = [
+            'userid' => 'Frank542',
+            'password' => 'testbruker123'
+        ];
+        
+        // Initialize cURL session
+        $ch = curl_init();
+        
+        // Set cURL options
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'OCS-APIRequest: true',
+            'Content-Type: application/x-www-form-urlencoded'
+        ]);
+        curl_setopt($ch, CURLOPT_USERPWD, $username . ':' . $password);
+        curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
+        
+        // Execute cURL request
+        $response = curl_exec($ch);
+        
+        // Check for errors
+        if (curl_errno($ch)) {
+            echo 'Error:' . curl_error($ch);
+        } else {
+            // Print response
+            echo 'Response: ' . $response;
+        }
+        
+        // Close cURL session
+        curl_close($ch);
+        
+        // Log the response for debugging
+        error_log('Nextcloud user creation response: ' . $response);
+        }
 }
