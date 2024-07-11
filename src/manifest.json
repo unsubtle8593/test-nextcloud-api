@@ -1,8 +1,8 @@
 {
-  "id": "example",
+  "id": "nextcloud",
   "type": "mod",
-  "name": "Example",
-  "description": "An example module for developers to get started",
+  "name": "Nextcloud",
+  "description": "A test module to manage users in a nextcloud instance.",
   "icon_url": "icon.svg",
   "homepage_url": "https://fossbilling.org",
   "author": "FOSSBilling",
