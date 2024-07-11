@@ -47,16 +47,16 @@ class Admin implements \FOSSBilling\InjectionAwareInterface
         return [
             'group' => [
                 'index' => 1500,                // menu sort order
-                'location' => 'example',          // menu group identifier for subitems
-                'label' => __trans('Example module'),    // menu group title
+                'location' => 'nextcloud',          // menu group identifier for subitems
+                'label' => __trans('Nextcloud module'),    // menu group title
                 'class' => 'example',           // used for css styling menu item
             ],
             'subpages' => [
                 [
-                    'location' => 'example', // place this module in extensions group
-                    'label' => __trans('Example module submenu'),
+                    'location' => 'nextcloud', // place this module in extensions group
+                    'label' => __trans('Nextcloud module configure'),
                     'index' => 1500,
-                    'uri' => $this->di['url']->adminLink('example'),
+                    'uri' => $this->di['url']->adminLink('nextcloud'),
                     'class' => '',
                 ],
             ],
