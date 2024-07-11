@@ -43,6 +43,7 @@ class Service
      * 
      * @return array 
      */
+    /*
     public function getModulePermissions(): array
     {
         return [
@@ -64,6 +65,7 @@ class Service
             'manage_settings' => [], // Tells FOSSBilling that there should be a permission key to manage the module's settings (admin/extension/settings/example)
         ];
     }
+    */
 
     /**
      * Method to install the module. In most cases you will use this
@@ -177,6 +179,7 @@ class Service
      *
      * @throws InformationException
      */
+    /*
     public static function onEventClientLoginFailed(\Box_Event $event): void
     {
         // getting Dependency Injector
@@ -228,6 +231,7 @@ class Service
             throw new InformationException('You have failed to login too many times. Contact support.');
         }
     }
+    */
 
     /**
      * This event hook is registered in example module client API call.
